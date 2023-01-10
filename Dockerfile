@@ -76,6 +76,8 @@ RUN \
 
 RUN \
    apt-get update \
+&& DEBIAN_FRONTEND=noninteractive apt-get install -y --allow-downgrades \
+       libglapi-mesa=22.0.1-1ubuntu2 \
 && DEBIAN_FRONTEND=noninteractive apt-get install -y \
        cmake \
        gfortran \
